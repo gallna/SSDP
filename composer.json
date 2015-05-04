@@ -1,0 +1,17 @@
+{
+    "name": "gallna/UPnPControlPoint",
+    "require": {
+        "gravitymedia/ssdp": "dev-master"
+    },
+    "authors": [
+        {
+            "name": "Tomasz Jonik",
+            "email": "tom.jonik@hotmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Kemer\\": "src/Kemer"
+        }
+    }
+}
