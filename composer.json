@@ -1,7 +1,8 @@
 {
     "name": "gallna/UPnPControlPoint",
     "require": {
-        "gravitymedia/ssdp": "dev-master"
+        "symfony/event-dispatcher": "~2.6",
+        "zendframework/zend-http": "2.4.*"
     },
     "authors": [
         {
