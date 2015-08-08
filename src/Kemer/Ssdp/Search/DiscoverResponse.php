@@ -181,10 +181,12 @@ class DiscoverResponse implements SearchResponseInterface
      */
     public function toString()
     {
-        $response = (new Response())
-            ->getHeaders()->addHeaders([
+        $response = new Response();
+        $response->setStatusCode(Response::STATUS_CODE_200);
+        $response->getHeaders()->addHeaders([
             'CACHE-CONTROL' => $this->getCacheControl(),
-            'DATE' => (new \DateTime())->format(\DateTime::RFC1123),//Thu, 06 Aug 2015 23:01:17 GMT
+            'DATE' => 'Sat, 08 Aug 2015 14:22:48 GMT',
+            //'DATE' => (new \DateTime())->format(\DateTime::RFC1123),//Thu, 06 Aug 2015 23:01:17 GMT
             new GenericHeader("EXT"),
             'LOCATION' => $this->getLocation(),
             'SERVER' => $this->getServer(),
