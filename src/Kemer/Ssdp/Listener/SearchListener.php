@@ -25,11 +25,7 @@ class SearchListener
 
         // Send delayed responses to multicast
         foreach ($searchEvent->getSearchResponses() as $response) {
-            sleep(
-                $discoverRequest->getMx() > 3
-                    ? $discoverRequest->getMx() / 2
-                    : $discoverRequest->getMx()
-            );
+            sleep($discoverRequest->getMx());
             $event->setResponse($response->toString());
             $dispatcher->dispatch(SsdpEvent::RESPONSE, $event);
         }

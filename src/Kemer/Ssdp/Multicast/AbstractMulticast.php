@@ -39,6 +39,8 @@ abstract class AbstractMulticast
         if (!empty($message)) {
             $this->remoteIp = $remoteIp;
             $this->remotePort = $remotePort;
+            e("#---- received ($remoteIp:$remotePort) ----", "light_purple");
+            e($message, "purple");
             return $message;
         }
     }
@@ -95,6 +97,8 @@ abstract class AbstractMulticast
                 sprintf("Socket send data must be a string '%s' given", gettype($data))
             );
         }
+        e("#---- send ($ip:$port) ----", "light_green");
+        e($data, "green");
         socket_sendto($this->getSocket(), $data, strlen($data), 0, $ip, $port);
     }
 

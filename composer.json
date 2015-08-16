@@ -1,5 +1,5 @@
 {
-    "name": "gallna/UPnPControlPoint",
+    "name": "gallna/SSDP",
     "require": {
         "symfony/event-dispatcher": "~2.6",
         "zendframework/zend-http": "2.4.*"
